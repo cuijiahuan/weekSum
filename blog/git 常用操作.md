@@ -69,8 +69,7 @@ HEAD指针、工作区和暂存区全部改变
     - 使用 git reset --hard <上一次commit id> 进行覆盖本地仓库、暂存区、工作区
 
 🌰  已经push
-    - 如果是修改错误，使用 git reset --hard <commit id> 将内容完全覆盖掉
-    - 如果是将文件添加入缓存区，使用 git reset --mixed撤回添加
+    - 使用 git reset --hard <commit id> 将内容完全覆盖掉
 ```
 git reset 通过取消缓存或者取消一系列提交的操作会摒弃一些你当前工作目录上的更改
 
@@ -97,6 +96,11 @@ git revert <commit id>
 ### ***git rebase / merge***
 `git rebase 会取消分支中的每个提交并把它们临时存放，然后把当前分支更新到最新的master分支，最后再把所有提交应用到分支上`
 
+```
+使用rebase合并多个commit
+git rebase -i <commit startId> <commit endId>
+
+```
 <br>
 
 `git merge 将两个分支，合并提交为一个分支`
