@@ -148,3 +148,9 @@ $ ssh -T github
 
 $ ssh -T gitlab
 ```
+
+使用github时，在项目下初始化git的时候记得定义好user.name和user.email
+
+$ git config --local user.name xxx
+
+$ git config --local user.email xxx@xxx.com
