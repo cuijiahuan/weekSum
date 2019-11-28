@@ -154,3 +154,10 @@ $ ssh -T gitlab
 $ git config --local user.name xxx
 
 $ git config --local user.email xxx@xxx.com
+
+
+
+rebase 123 -> 1,3
+
+
+rebase 恢复提交的commit
