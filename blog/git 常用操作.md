@@ -105,8 +105,46 @@ git rebase -i <commit startId> <commit endId>
 
 `git merge 将两个分支，合并提交为一个分支`
 
-
-
+---
 
 #### ***git同时连接gitlab和github***
----
+
+生成gitlab和github的ssh key
+$ ssh-keygen -t rsa -C "your.email@example.com"
+
+    - id_rsa_ggithub
+    - id_rsa_ggithub.pub 
+    - id_rsa_tujia
+    - id_rsa_tujia.pub
+
+gitlab和github中添加ssh key
+
+添加config文件
+```
+$ touch config
+$ vim config
+```
+
+添加内容为
+```
+# gitlab
+Host gitlab
+    User git
+    HostName gitlab.cheanjiait.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+
+# github
+Host github
+    User git
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_github
+```
+
+测试连接
+```
+$ ssh -T github
+
+$ ssh -T gitlab
+```
