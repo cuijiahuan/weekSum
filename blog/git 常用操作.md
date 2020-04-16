@@ -1,3 +1,9 @@
+---
+title: Git学习
+date: 2019-11-28 22:43:24
+tags: 
+- git
+---
 ## <center>git 分享（一）</center>
 
 ![](http://www.leyar.me/images/bg2015120901.png)
@@ -154,10 +160,3 @@ $ ssh -T gitlab
 $ git config --local user.name xxx
 
 $ git config --local user.email xxx@xxx.com
-
-
-
-rebase 123 -> 1,3
-
-
-rebase 恢复提交的commit
